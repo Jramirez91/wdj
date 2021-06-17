@@ -1,123 +1,37 @@
 import "./App.css";
 import { MdLocationOn } from "react-icons/md";
 import couple from "./img/couple.jpg";
+import hands from "./img/hands.jpg";
+
+import Menu from "./components/Menu";
 
 function App() {
   return (
     <div className="flex flex-wrap">
-      <div className="w-full h-full lg:h-screen/2  bg-center  order-2 lg:order-1 bg-pink-50">
-        <div className="w-full h-screen bg-opacity-50 flex justify-center items-center">
+      <div
+        id="home"
+        className="w-full h-full lg:h-screen/2  bg-opacity-50 bg-center order-2 lg:order-1 bg-pink-50"
+        style={{
+          backgroundImage: `url(${hands})`,
+        }}
+      >
+        <div className="w-full h-screen  flex justify-center items-center bg-gray-900 bg-opacity-50">
           <div className="mx-4 text-center ">
-            <h1 className="font-bold text-9xl mb-4 title text-purple-600">
-              Deymi & Jimmy
-            </h1>
-            <h2 className="font-bold text-3xl mb-12 title text-purple-600">
+            <h1 className="text-9xl mb-12 title text-white">Deymi & Jimmy</h1>
+            <h2 className="text-5xl mb-12 subtitle text-white ">
+              !Nos casamos!
+            </h2>
+            <h2 className="text-3xl mb-12 subtitle text-white  tracking-widest">
               - 28 Noviembre 2021 -
             </h2>
           </div>
         </div>
       </div>
-      <nav
-        className="sticky top-0 w-full bg-white shadow order-1 lg:order-2"
-        role="navigation"
-      >
-        <div className="container mx-auto p-2 flex flex-wrap items-center md:flex-no-wrap">
-          <div className="mr-4 md:mr-8">
-            <a href="#" rel="home">
-              <svg
-                className="w-10 h-10 text-purple-600"
-                width="54"
-                height="54"
-                viewBox="0 0 54 54"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Inicio</title>
-                <path
-                  fill="currentColor"
-                  d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-          <div className="ml-auto md:hidden">
-            <button
-              className="flex items-center px-3 py-2 border rounded"
-              type="button"
-            >
-              <svg
-                className="h-3 w-3"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
-            </button>
-          </div>
-          <div className="w-full md:w-auto md:flex-grow md:flex md:items-center">
-            <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0">
-              <li>
-                <a
-                  className="block px-4 py-1 md:p-2 lg:px-4"
-                  href="#matrimonio"
-                  title="MATRIMONIO"
-                >
-                  MATRIMONIO
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-1 md:p-2 lg:px-4"
-                  href="#nosotros"
-                  title=" NOSOTROS"
-                >
-                  NOSOTROS
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-1 md:p-2 lg:px-4"
-                  href="#informacion"
-                  title="INFORMACIÓN"
-                >
-                  INFORMACIÓN
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-1 md:p-2 lg:px-4"
-                  href="#"
-                  title="Link"
-                >
-                  REGALOS
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-1 md:p-2 lg:px-4"
-                  href="#"
-                  title="Link"
-                >
-                  MENSAJES
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-1 md:p-2 lg:px-4"
-                  href="#"
-                  title="Link"
-                >
-                  RSVP
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Menu />
 
       <div
         id="matrimonio"
-        className="w-full h-full bg-center  bg-fixed bg-no-repeat bg-cover order-3"
+        className="w-full h-full bg-center bg-fixed bg-no-repeat bg-cover order-3"
         style={{
           backgroundImage: `url(${couple})`,
         }}
@@ -140,8 +54,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="nosotros" className="w-full   order-4 ">
-        <div className="text-center w-full pt-20 bg-white h-1/2 mb-20 grid grid-cols-2">
+      <div id="nosotros" className="w-full  order-4 ">
+        <div className="text-center w-full pt-20 h-1/2 mb-20 grid grid-cols-2">
           <div>
             <h2 className="font-bold text-3xl  mb-4">Deymi</h2>
             <div className="mx-auto text-xl tracking-widest mb-1 text-justify w-3/4">
@@ -164,10 +78,21 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="informacion" className="w-full order-5 py-20 bg-green-200">
+      <div
+        id="informacion"
+        className="w-full h-screen order-5 py-20 bg-green-200"
+      >
         <div className="text-center font-bold text-2xl">INFORMACIÓN</div>
         <div className="mt-12 text-xl text-justify mx-auto w-11/12">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and web
+          page editors now use Lorem Ipsum as their default model text, and a
+          search for 'lorem ipsum' will uncover many web sites still in their
+          infancy. Various versions have evolved over the years, sometimes by
+          accident, sometimes on purpose (injected humour and the like).
         </div>
       </div>
     </div>

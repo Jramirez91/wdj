@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&family=Rouge+Script&display=swap');
 
+body {
+  font-family: "Josefin Slab", serif;
+  scroll-behavior: smooth;
+}
 .title {
+  font-family: "Great Vibes", cursive;
+}
+.subtitle {
   font-family: "Rouge Script", cursive;
 }
