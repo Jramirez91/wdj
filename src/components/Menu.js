@@ -72,12 +72,11 @@ const Menu = () => {
             {menu.map((v, i) => (
               <li key={i}>
                 <Link
-                  spy={true}
                   smooth={true}
                   offset={-60}
                   duration={500}
                   to={v.href}
-                  className="block px-4 py-1 md:p-2 lg:px-4 active"
+                  className="block px-4 py-1 md:p-2 lg:px-4 cursor-pointer"
                 >
                   {v.title}
                 </Link>
