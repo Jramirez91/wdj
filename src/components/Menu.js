@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Menu = () => {
   const menu = [
@@ -77,7 +77,7 @@ const Menu = () => {
                   offset={-60}
                   duration={500}
                   to={v.href}
-                  className="block px-4 py-1 md:p-2 lg:px-4 active"
+                  className="block px-4 py-1 md:p-2 lg:px-4 cursor-pointer"
                 >
                   {v.title}
                 </Link>
