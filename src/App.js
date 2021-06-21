@@ -48,7 +48,7 @@ function App() {
             <div className=" flex justify-center items-center">
               <MdLocationOn className="w-20 h-20 text-red-500" />
             </div>
-            <a href="" className="font-bold text-xl mb-6 text-center w-1/2">
+            <a href="#mapa" className="font-bold text-xl mb-6 text-center w-1/2">
               VER MAPA
             </a>
           </div>
