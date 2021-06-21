@@ -4,6 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&family=Rouge+Script&display=swap');
 
+@layer utilities {
+  .bold-plc::placeholder {
+    font-weight: bold;
+  }
+}
 body {
   font-family: "Josefin Slab", serif;
   scroll-behavior: smooth;
