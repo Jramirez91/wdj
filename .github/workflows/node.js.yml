@@ -27,3 +27,21 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build 
+
+    actions:
+    - action: "Upload files to localhost"
+      type: "FTP"
+      input_type: "SCM_REPOSITORY"
+      local_path: "/"
+      remote_path: "Home/www"
+      use_temporary_files: true
+      login: "api_tests_user"
+      password: "api_tests_password"
+      host: "localhost"
+      port: "21"
+      deployment_excludes:
+      - "/assets"
+      - "file.txt"
+      deployment_includes:
+      - "/assets/assets-new/"
+      - "/assets/file.txt"

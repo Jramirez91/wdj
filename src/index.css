@@ -13,9 +13,23 @@ body {
   font-family: "Josefin Slab", serif;
   scroll-behavior: smooth;
 }
+.timber{
+  color: #e3dbd3;
+}
 .title {
   font-family: "Great Vibes", cursive;
+  color: #e3dbd3;
 }
 .subtitle {
   font-family: "Rouge Script", cursive;
+  color: #e3dbd3;
+}
+.timber-bg{
+  background-color: #e3dbd3;
+}
+.mount-bg{
+  background-color: #9d7982;
+}
+.wine-bg{
+  background-color: #733236;
 }

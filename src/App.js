@@ -17,11 +17,11 @@ function App() {
       >
         <div className="w-full h-screen  flex justify-center items-center bg-gray-900 bg-opacity-50">
           <div className="mx-4 text-center ">
-            <h1 className="text-9xl mb-12 title text-white">Deymi & Jimmy</h1>
-            <h2 className="text-5xl mb-12 subtitle text-white ">
+            <h1 className="text-9xl mb-12 title ">Deymi & Jimmy</h1>
+            <h2 className="text-5xl mb-12 subtitle  ">
               !Nos casamos!
             </h2>
-            <h2 className="text-3xl mb-12 subtitle text-white  tracking-widest">
+            <h2 className="text-3xl mb-12 subtitle  tracking-widest">
               - 28 Noviembre 2021 -
             </h2>
           </div>
@@ -40,8 +40,7 @@ function App() {
           <div className="text-center w-full pt-6 bg-white h-1/2 flex flex-col justify-center items-center">
             <h2 className="font-bold text-3xl mb-4">NUESTRO MATRIMONIO</h2>
             <h2 className="text-xl mb-1 text-center w-1/2">
-              Nos vamos a casar el domingo 28 de nomviembre en la hacienda Santa
-              María vía Arrayanes a las 12pm. Queremos compartir con ustedes el
+              Nos vamos a casar el domingo 28 de noviembre del 2021 en Tizimin, Yucatán. Queremos compartir con ustedes el
               día más especial de nuestra vida.
             </h2>
             <h3 className="text-2xl mb-6 text-center w-1/2">!LOS ESPERAMOS!</h3>

@@ -1,6 +1,7 @@
 const RSVP = () => {
   return (
-    <div id="informacion" className="w-full order-5 py-20 bg-green-200">
+    <div id="rsvpls
+    " className="w-full order-5 py-20 bg-green-200">
       <div className="text-center font-bold text-2xl">INFORMACIÓN</div>
       <div className="mt-12 text-xl text-justify mx-auto w-11/12">
         It is a long established fact that a reader will be distracted by the
