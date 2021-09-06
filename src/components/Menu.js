@@ -15,10 +15,10 @@ const Menu = () => {
       href: "informacion",
       title: "INFORMACIÓN",
     },
-    {
-      href: "regalos",
-      title: "REGALOS",
-    },
+    // {
+    //   href: "regalos",
+    //   title: "REGALOS",
+    // },
     {
       href: "mensajes",
       title: "MENSAJES",

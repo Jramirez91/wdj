@@ -1,4 +1,12 @@
-const Message = () => {
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { getInbox } from "../redux/actions/inboxActions";
+
+const Message = ({ inbox, getInbox }) => {
+  useEffect(() => {
+    getInbox();
+  }, [getInbox]);
+
   return (
     <div
       id="mensajes"
@@ -14,24 +22,20 @@ const Message = () => {
                 placeholder="DE:"
                 type="text"
               />
-            
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
-           
               <input
                 className="appearance-none block w-full font-bold placeholder-black  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 bold-plc"
                 id="email"
                 placeholder="E-MAIL"
                 type="email"
               />
-            
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
-            
               <textarea
                 className=" no-resize appearance-none block w-full font-bold placeholder-black  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none bold-plc"
                 id="message"
@@ -54,8 +58,25 @@ const Message = () => {
       </div>
       <div className="w-3/4">
         <div className="text-6xl text-center">BUZÓN DE FELICITACIONES</div>
+        {inbox.map((i) => (
+          <div className="flex" key={i.id}>
+            <div className="flex-1 flex-row border-l mx-20 px-4 py-2 sm:px-6 sm:py-4 sm:mb-8 leading-relaxed">
+              <strong className="text-xl">{i.name === undefined || i.name === "" ? i.email : i.name}</strong> <span className="text-xs timber">{i.created_at}</span>
+              <p className="text-white text-lg">
+                {i.message}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
-export default Message;
+
+const mapStateToProps = (state) => {
+  
+  const { all } = state.inbox;
+  
+  return { inbox: all };
+};
+export default connect(mapStateToProps, { getInbox })(Message);
