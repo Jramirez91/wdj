@@ -2,7 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&family=Rouge+Script&family=Alex+Brush&display=swap');
+
+
+
+/* SCSS HEX */
+
+.text-color-snow{
+color: #F7F1F1ff;
+} 
+.text-color-cultured{
+  color: #FBF9F7ff;
+}
+.text-color-white{
+  color: #FEFFFEff;
+}
+.text-color-camel{
+  color: #C09359ff;
+}
+
+
+.bg-snow{
+background-color: #F7F1F1ff;
+} 
+.bg-cultured{
+  background-color: #FBF9F7ff;
+}
+.bg-whites{
+  background-color: #FEFFFEff;
+}
+.bg-camel{
+  background-color: #C09359ff;
+}
+
+
 
 @layer utilities {
   .bold-plc::placeholder {
@@ -17,8 +50,14 @@ body {
   color: #e3dbd3;
 }
 .title {
+  font-family: 'Alex Brush', cursive;
+  color: aliceblue;
+}
+.font-alex-brush{
+  font-family: 'Alex Brush', cursive;
+}
+.font-great-vibes{
   font-family: "Great Vibes", cursive;
-  color: #e3dbd3;
 }
 .subtitle {
   font-family: "Rouge Script", cursive;

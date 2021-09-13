@@ -9,7 +9,7 @@ const Menu = () => {
     },
     {
       href: "nosotros",
-      title: "NOSOTROS",
+      title: "NUESTRA HISTORIA",
     },
     {
       href: "informacion",
@@ -31,14 +31,14 @@ const Menu = () => {
 
   return (
     <nav
-      className="sticky top-0 w-full bg-white shadow order-1 lg:order-2"
+      className="w-full md:sticky md:top-0 "
       role="navigation"
     >
-      <div className="container mx-auto p-2 flex flex-wrap items-center md:flex-no-wrap">
-        <div className="mr-4 md:mr-8">
+      <div className="pt-28 flex flex-col ">
+        <div className="flex justify-center  pb-12">
           <Link to="home" spy={true} smooth={true} duration={500} rel="home">
             <svg
-              className="w-10 h-10 text-purple-600"
+              className="w-10 h-10 text-purple-600 cursor-pointer"
               width="54"
               height="54"
               viewBox="0 0 54 54"
@@ -52,6 +52,7 @@ const Menu = () => {
             </svg>
           </Link>
         </div>
+        <h1 className="text-center text-4xl text-color-camel mb-12 font-alex-brush">Deymi & Jimmy</h1>
         <div className="ml-auto md:hidden">
           <button
             className="flex items-center px-3 py-2 border rounded"
@@ -67,13 +68,12 @@ const Menu = () => {
             </svg>
           </button>
         </div>
-        <div className="w-full md:w-auto md:flex-grow md:flex md:items-center">
-          <ul className="flex flex-col font-bold text-lg mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0">
+        <div className="w-full md:w-auto md:flex md:flex-col md:items-center">
+          <ul className="">
             {menu.map((v, i) => (
               <li key={i}>
                 <Link
                   smooth={true}
-                  offset={-60}
                   duration={500}
                   to={v.href}
                   className="block px-4 py-1 md:p-2 lg:px-4 cursor-pointer"
