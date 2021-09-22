@@ -49,7 +49,7 @@ export const InboxService = {
       return ApiService.get("inbox", slug);
     },
     create(params) {
-      return ApiService.post("inbox", { article: params });
+      return ApiService.post("inbox",  params );
     },
     update(slug, params) {
       return ApiService.update("inbox", slug, { article: params });

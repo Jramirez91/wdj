@@ -1,4 +1,4 @@
-import { GET_INBOX,ADD_INBOX} from '../types';
+import { GET_INBOX,ADD_INBOX,ERROR_REQUEST,START_REQUEST} from '../types';
 
 
 const initialState = {
@@ -13,6 +13,12 @@ export default function(state = initialState, action){
 
     switch(action.type){
 
+        case START_REQUEST:
+            return{
+                ...state,
+                loading:true
+            }
+
         case GET_INBOX:
             return {
                 ...state,
@@ -23,6 +29,14 @@ export default function(state = initialState, action){
                 loading:false
 
             }
+        case ADD_INBOX:
+            return {
+                ...state,
+                loading:false
+            }
+            case ERROR_REQUEST:
+                console.error(action);
+                break;
        
         default: return state
     }
