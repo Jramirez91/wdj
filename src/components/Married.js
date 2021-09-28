@@ -6,7 +6,7 @@ const Married = () => {
 
     const [dates, setDates] = useState({});
 
-    const DATE_TARGET = new Date('11/28/2021 0:01 AM');
+    const DATE_TARGET = new Date('11/28/2021 04:01 PM');
 
     const MILLISECONDS_OF_A_SECOND = 1000;
     const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
@@ -47,21 +47,20 @@ const Married = () => {
     return (
         <div
             id="matrimonio"
-            className="w-full h-screen bg-center bg-fixed bg-no-repeat bg-cover order-3"
+            className="w-full h-screen md:min-h-screen bg-center bg-fixed bg-no-repeat bg-cover order-3 "
             style={{
                 backgroundImage: `url(${couple})`,
             }}>
             <div className="w-full h-screen  bg-opacity-50 bg-black ">
-                <div className="text-center w-full bg-white h-1/2 flex flex-col justify-center items-center">
-                    
-                        <h2 className="font-bold text-3xl mb-4 tracking-widest">¡Llegó el día!</h2>
-                        <h2 className="text-2xl mb-6 text-center w-1/2">
+                <div className="h-1/2 text-center w-full bg-white  flex flex-col justify-center items-center">
+                        <h2 className="font-bold text-xl sm:text-2xl xl:text-3xl mt-4 lg:mt-0 mb-4 tracking-widest">¡Llegó el día!</h2>
+                        <h2 className="text-lg xl:text-2xl mb-2 xl:mb-6 text-center w-3/4">
                             ¡Nos casamos! y necesitamos invitados, con o sin experiencia, para
                             la celebración de nuestra boda. Deja todo lo que tengas que hacer
                             el domingo <strong>28 de Noviembre</strong> y únete a nosotros.
                         </h2>
 
-                        <h3 className="text-4xl text-center w-1/2 ">
+                        <h3 className="text-2xl xl:text-4xl text-center w-3/4 ">
                             !Te esperamos, no Faltes!
                         </h3>
                         <Link
@@ -69,14 +68,14 @@ const Married = () => {
                             offset={-60}
                             duration={500}
                             to="informacion"
-                            className="mt-6 text-2xl cursor-pointer"
+                            className="mt-1 lg:mt-6 text-lg xl:text-2xl cursor-pointer"
                         >
                             Más detalles...
                         </Link>
                     
                 </div>
                 <div className="text-white h-1/2  w-full flex flex-col justify-center items-center" >
-                    <h2 className="text-6xl text-center  mb-8 font-alex-brush tracking-widest">
+                    <h2 className="text-4xl md:text-6xl text-center  mb-8 font-alex-brush tracking-widest">
                         Futura familia en
                     </h2>
                     <h2 className=" text-center">
@@ -87,11 +86,11 @@ const Married = () => {
                                 <div>{dates.minutes}</div>
                                 <div>{dates.seconds}</div>
                             </div>
-                            <div className="grid grid-cols-4 text-4xl">
+                            <div className="grid grid-cols-4 text-xl md:text-4xl">
                                 <div>Días</div>
                                 <div>Horas</div>
                                 <div>Minutos</div>
-                                <div className="ml-6">Segundos</div>
+                                <div className="ml-2 md:ml-6">Segundos</div>
                             </div>
                         </div>
                     </h2>

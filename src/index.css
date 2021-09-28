@@ -4,7 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&family=Rouge+Script&family=Alex+Brush&display=swap');
 
-
+html {
+  overflow-x: hidden;
+}
 
 /* SCSS HEX */
 
@@ -72,3 +74,55 @@ body {
 .wine-bg{
   background-color: #733236;
 }
+
+.navbar {
+  transition: all 330ms ease-out;
+}
+
+.menu-c{
+  margin-left: -184px;
+}
+.navbar-open {
+  transform: translateX(0%);
+}
+.navbar-close {
+  transform: translateX(-100%);
+}
+
+#svJD{
+  padding: 8px;
+}
+
+.lt-d{
+     animation: kaboom 2s ease-out alternate  infinite;
+}
+
+.lt-j{  
+  animation: kaboom 2s ease alternate infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes kaboom {
+ 
+  90%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 3s linear 800ms, opacity 800ms;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+

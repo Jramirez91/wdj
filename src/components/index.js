@@ -5,3 +5,5 @@ export { default as Message } from "./Message";
 export { default as RSVP } from "./RSVP";
 export { default as Married} from './Married';
 export {default as SubInformation} from './SubInformation'
+export {default as SubOrganization} from './SubOrganization'
+export {default as Organization} from './Organization'
