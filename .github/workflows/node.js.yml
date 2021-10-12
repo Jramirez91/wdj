@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-
+    name: Build ⛏
     runs-on: ubuntu-latest
 
     strategy:
@@ -29,8 +29,24 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run the tests
-      run: npm test
-
     - name: Build
       run: npm run build
+      
+  deploy:
+    name: Deploy 🚀
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with: 
+          name: build
+          path: build
+      - name: Sync files to hosting
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with: 
+          server: ftp.ramirezoy.com
+          username: jimbox@ramirezoy.com
+          password: ${{ secrets.ftp_password }}
