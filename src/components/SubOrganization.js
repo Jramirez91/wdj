@@ -1,17 +1,18 @@
-const SubOrganization = ({model}) =>{
+const SubOrganization = ({ model }) => {
 
-    const {event,message,position,picture} = model
+    const { event,  position, picture } = model
 
-    return(
-        <div className="w-full lg:w-80 bg-whites mb-5 border-yellow-600 border-opacity-10 border">
-            <div className="xl:pt-10 text-lg xl:text-xl text-justify px-10">
+    return (
+        <div className="w-full lg:w-40  mb-5 ">
+            <div className="xl:pt-10 text-lg xl:text-xl text-justify ">
 
-                <h2 className="text-2xl xl:text-4xl font-bold text-color-camel">{position}</h2>
-                
-                <h2 className="text-2xl lx:text-3xl text-color-camel">{event}</h2>
-                
-                <p className="mb-4">{message}</p>
-                
+                {/* <h2 className="text-2xl xl:text-4xl font-bold text-color-camel">{position}</h2> */}
+                <img className="h-16 mx-auto" src={picture} alt={position}></img>
+
+                <h2 className="text-2xl lx:text-3xl mt-4 pt-6 text-center text-color-camel mx-10 lg:mx-0  border-t-2">{event}</h2>
+
+
+
             </div>
         </div>
     )

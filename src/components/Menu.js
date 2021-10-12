@@ -28,6 +28,10 @@ const Menu = ({ open }) => {
 
   const menu = [
     {
+      href: "home",
+      title: "INICIO",
+    },
+    {
       href: "matrimonio",
       title: "MATRIMONIO",
     },
@@ -47,10 +51,6 @@ const Menu = ({ open }) => {
     //   href: "regalos",
     //   title: "REGALOS",
     // },
-    {
-      href: "mensajes",
-      title: "MENSAJES",
-    },
     {
       href: "rsvp",
       title: "RSVP",
