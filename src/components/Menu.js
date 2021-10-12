@@ -1,30 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import logo from '../img/logo.png'
-const Menu = ({ open }) => {
-
-
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
+const Menu = ({ open, windowSize }) => {
 
   const menu = [
     {
@@ -58,19 +35,20 @@ const Menu = ({ open }) => {
   ];
 
   return (
-    <div className={` navbar inset-y-0 flex-shrink-0  ${open ? 'w-64' : windowSize.width < 450 ? 'menu-c' : 'w-64'}  md:w-1/5 border-r lg:static  focus:outline-none bg-snow ${windowSize.width < 450 ? open ? 'navbar-open' : 'navbar-close' : 'navbar-open'}`}>:
+    <div className={`navbar inset-y-0 flex-shrink-0  bg-snow md:w-1/5 border-r lg:static ${windowSize.width < 732 ? open ? 'fixed transform transition -translate-x-2' : ' fixed navbar-close' : 'navbar-open'}`}>:
       <nav
         className="w-full sticky top-0 "
         role="navigation"
       >
-        <div className="pt-28 flex flex-col ">
-          <div className="flex justify-center  pb-12">
-            <Link to="home" spy={true} smooth={true} duration={500} rel="home">
-              <img src={logo} className="h-72" alt="logo" />
+        <div className=" lg:pt-28 flex flex-col ">
+          <div className="flex justify-center pb-4 lg:pb-12">
+            <Link to="home" className="cursor-pointer" spy={true} smooth={true} duration={500} rel="home">
+              <img src={logo} className="h-60 sm:h-36 lg:h-72" alt="logo" />
             </Link>
           </div>
-          <h1 className="text-center text-2xl xl:text-4xl text-color-camel mb-12 font-alex-brush">Deymi & Jimmy</h1>
-
+          <Link to="home" className="cursor-pointer" spy={true} smooth={true} duration={500} rel="home">
+            <h1 className="text-center text-2xl xl:text-4xl text-color-camel mb-12 font-alex-brush">Deymi & Jimmy</h1>
+          </Link>
           <div className="w-full md:w-auto md:flex md:flex-col md:items-center">
             <ul className="">
               {menu.map((v, i) => (
@@ -79,7 +57,7 @@ const Menu = ({ open }) => {
                     smooth={true}
                     duration={500}
                     to={v.href}
-                    className="block px-4 py-1 md:p-2 lg:px-4 cursor-pointer"
+                    className="block px-8 py-1 md:p-2 lg:px-4 cursor-pointer text-sm sm:text-base font-bold"
                   >
                     {v.title}
                   </Link>

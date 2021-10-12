@@ -8,12 +8,33 @@ function App() {
 
   const [menu, setMenu] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
     }, 3000);
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
   }, [])
+
+
+
 
   function handleMenu() {
     setMenu(!menu);
@@ -21,7 +42,7 @@ function App() {
 
   return (
 
-    <div className="flex flex-nowrap md:flex-wrap">
+    <div className="flex flex-nowrap md:flex-wrap ">
 
       <div className={`w-full h-full fixed ${loading ? 'block' : 'invisible fade-out'} top-0 left-0 bg-snow z-50`}>
         <span className="top-1/3 my-0 mx-auto  block relative w-48">
@@ -29,33 +50,30 @@ function App() {
         </span>
       </div>
 
-      <Menu open={menu} />
-
-      <div className="w-full md:w-4/5 order-2 md:order-2">
+      <Menu open={menu} windowSize={windowSize} />
+      <div className={`fixed mt-8 z-40 ml-10  ${menu ? 'transform transition translate-x-44' : ''} md:hidden `}>
+        <button
+          className="flex items-center px-4 py-4 rounded-full bg-camel"
+          type="button"
+          onClick={handleMenu}
+        >
+          <svg
+            className="h-4 w-4"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path fill="white" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div className={`w-full z-10 md:w-4/5 order-2 md:order-2  ${windowSize.width < 732 ? menu ? 'transform transition translate-x-44' : '' : ''} `}>
 
         <div
           id="home"
           className="relative flex justify-center w-full h-screen md:min-h-screen  bg-center order-2  overflow-hidden"
 
         >
-
-          <div className="fixed mt-8 z-50 -ml-72 md:hidden">
-            <button
-              className="flex items-center px-4 py-4 rounded-full bg-camel"
-              type="button"
-              onClick={handleMenu}
-            >
-              <svg
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Menu</title>
-                <path fill="white" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
-            </button>
-          </div>
-          
           <div className="relative z-30 w-full  md:min-h-screen flex justify-center items-center bg-gray-900 bg-opacity-60">
 
             <div className="mx-4 text-center ">

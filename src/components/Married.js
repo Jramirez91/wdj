@@ -51,21 +51,21 @@ const Married = () => {
             }}>
             <div className="w-full h-screen  bg-opacity-50 bg-black ">
                 <div className="h-1/2 text-center w-full bg-white  flex flex-col justify-center items-center">
-                    <h2 className="font-bold text-xl sm:text-2xl xl:text-3xl mt-4 lg:mt-0 mb-4 tracking-widest">¡Llegó el día!</h2>
-                    <h2 className="text-lg xl:text-2xl mb-2 xl:mb-6 text-center w-3/4">
+                    <h2 className="font-bold text-2xl sm:text-2xl xl:text-3xl mt-4  xl:mt-0 mb-4 tracking-widest">¡Llegó el día!</h2>
+                    <h2 className="text-base xl:text-2xl mb-2 xl:mb-6 text-center lg:w-3/4">
                         ¡Nos casamos! y necesitamos invitados, con o sin experiencia, para
                         la celebración de nuestra boda. Deja todo lo que tengas que hacer
                         el domingo <strong>28 de Noviembre</strong> y únete a nosotros.
                     </h2>
 
-                    <h3 className="text-2xl xl:text-4xl text-center w-3/4 ">
+                    <h3 className="text-xl xl:text-4xl text-center w-3/4 ">
                         !Te esperamos, no Faltes!
                     </h3>
                     <Link
                         smooth={true}
                         offset={-60}
                         duration={500}
-                        to="informacion"
+                        to="cuandoydonde"
                         className="mt-1 lg:mt-6 text-lg xl:text-2xl cursor-pointer"
                     >
                         Más detalles...

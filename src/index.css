@@ -80,7 +80,7 @@ body {
 }
 
 .menu-c{
-  margin-left: -184px;
+  transform: translateX(-300px);
 }
 .navbar-open {
   transform: translateX(0%);

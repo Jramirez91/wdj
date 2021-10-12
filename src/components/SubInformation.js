@@ -12,9 +12,11 @@ const SubInformation = ({ model }) => {
 
                 <h2 className="text-2xl lx:text-3xl text-color-camel">{event}</h2>
                 <p className="text-xl xl:text-2xl font-bold mb-4">{location.name}</p>
-                <p className="flex justify-start"><a href={location.maps} target="_blank" rel="noreferrer" className="cursor-pointer ml-2"><MdLocationOn  className="fill-current text-color-camel"/></a>{location.address} </p>
-                <p className="mb-3">{location.state}</p>
-                
+                <a href={location.maps} target="_blank" rel="noreferrer" className="cursor-pointer ">
+                    <MdLocationOn className="fill-current text-color-camel ml-2" />
+                    <p className="-mt-5 px-7">{location.address}</p>
+                    <p className="mb-3">{location.state}</p></a>
+
                 <p className="tracking-widest">{location.date}</p>
                 <p className="mb-10">{location.time}</p>
             </div>

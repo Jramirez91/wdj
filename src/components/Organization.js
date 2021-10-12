@@ -44,7 +44,7 @@ const Organization = () => {
   },
   {
     position: 6,
-    event: "MUSICA",
+    event: "MÚSICA",
     picture: music,
 
   },
@@ -56,7 +56,7 @@ const Organization = () => {
       <div className="text-center xl:text-left text-3xl mt-10 mb-2 lg:ml-48 font-alex-brush text-color-camel">Boda</div>
       <div className="text-center xl:text-left text-3xl lg:ml-48 mb-10 font-bold">ORGANIZACIÓN</div>
 
-      <div className="w-full flex flex-col md:flex-row md:justify-center">
+      <div className="w-full flex flex-col lg:flex-row md:justify-center">
 
         {organization.map((v, k) => <SubOrganization key={k} model={v} />)}
 
