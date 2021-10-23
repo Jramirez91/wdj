@@ -42,7 +42,7 @@ const Information = () => {
       name: "LOS PALMARES",
       date: "28 Noviembre 2021",
       time: "17:30 Hrs",
-      address: "Calle 46 N° S/N entre 87 Y 89, Salida Valladolid",
+      address: "Calle 46A N° S/N entre 87 Y 89, Salida Valladolid",
       state: "TIZIMIN, YUCATÁN",
       maps: "https://goo.gl/maps/VaSAQipoWGks6rM8A"
     }
