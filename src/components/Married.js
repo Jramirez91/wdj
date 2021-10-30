@@ -1,5 +1,5 @@
 import { useEffect,  useState } from "react";
-import couple from "../img/couple.jpg";
+import couple from "../img/couple.webp";
 import { Link } from "react-scroll";
 
 const Married = () => {
@@ -45,9 +45,10 @@ const Married = () => {
     return (
         <div
             id="matrimonio"
-            className="w-full h-screen md:min-h-screen bg-center bg-fixed bg-no-repeat bg-cover order-3 "
+            className="w-full h-screen md:min-h-screen bg-fixed  bg-no-repeat  bg-cover order-3 "
             style={{
                 backgroundImage: `url(${couple})`,
+                backgroundPosition: "150px 0px"
             }}>
             <div className="w-full h-screen  bg-opacity-50 bg-black ">
                 <div className="h-1/2 text-center w-full bg-white  flex flex-col justify-center items-center">
