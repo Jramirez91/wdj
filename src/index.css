@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&family=Rouge+Script&family=Alex+Brush&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&family=Rouge+Script&family=Alex+Brush&display=swap");
 
 html {
   overflow-x: hidden;
@@ -11,34 +10,31 @@ html {
 
 /* SCSS HEX */
 
-.text-color-snow{
-color: #F7F1F1ff;
-} 
-.text-color-cultured{
-  color: #FBF9F7ff;
+.text-color-snow {
+  color: #f7f1f1ff;
 }
-.text-color-white{
-  color: #FEFFFEff;
+.text-color-cultured {
+  color: #fbf9f7ff;
 }
-.text-color-camel{
-  color: #C09359ff;
+.text-color-white {
+  color: #fefffeff;
 }
-
-
-.bg-snow{
-background-color: #F7F1F1ff;
-} 
-.bg-cultured{
-  background-color: #FBF9F7ff;
-}
-.bg-whites{
-  background-color: #FEFFFEff;
-}
-.bg-camel{
-  background-color: #C09359ff;
+.text-color-camel {
+  color: #c09359ff;
 }
 
-
+.bg-snow {
+  background-color: #f7f1f1ff;
+}
+.bg-cultured {
+  background-color: #fbf9f7ff;
+}
+.bg-whites {
+  background-color: #fefffeff;
+}
+.bg-camel {
+  background-color: #c09359ff;
+}
 
 @layer utilities {
   .bold-plc::placeholder {
@@ -49,30 +45,30 @@ body {
   font-family: "Josefin Slab", serif;
   scroll-behavior: smooth;
 }
-.timber{
+.timber {
   color: #e3dbd3;
 }
 .title {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   color: aliceblue;
 }
-.font-alex-brush{
-  font-family: 'Alex Brush', cursive;
+.font-alex-brush {
+  font-family: "Alex Brush", cursive;
 }
-.font-great-vibes{
+.font-great-vibes {
   font-family: "Great Vibes", cursive;
 }
 .subtitle {
   font-family: "Rouge Script", cursive;
   color: #e3dbd3;
 }
-.timber-bg{
+.timber-bg {
   background-color: #e3dbd3;
 }
-.mount-bg{
+.mount-bg {
   background-color: #9d7982;
 }
-.wine-bg{
+.wine-bg {
   background-color: #733236;
 }
 
@@ -80,7 +76,7 @@ body {
   transition: all 330ms ease-out;
 }
 
-.menu-c{
+.menu-c {
   transform: translateX(-300px);
 }
 .navbar-open {
@@ -90,22 +86,21 @@ body {
   transform: translateX(-100%);
 }
 
-#svJD{
+#svJD {
   padding: 8px;
 }
 
-.lt-d{
-     animation: kaboom 2s ease-out alternate  infinite;
+.lt-d {
+  animation: kaboom 2s ease-out alternate infinite;
 }
 
-.lt-j{  
+.lt-j {
   animation: kaboom 2s ease alternate infinite;
   animation-delay: 0.1s;
 }
 
 @keyframes kaboom {
- 
-  90%{
+  90% {
     transform: scale(1);
   }
   100% {
@@ -120,10 +115,9 @@ body {
 }
 @keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
-
